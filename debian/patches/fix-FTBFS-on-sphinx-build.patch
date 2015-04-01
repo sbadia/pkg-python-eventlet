@@ -2,8 +2,8 @@ Description: Removes line that is doing FTBFS in doc
 Author: Thomas Goirand <zigo@debian.org>
 Forwarded: no
 
---- python-eventlet-0.13.0.orig/doc/modules/zmq.rst
-+++ python-eventlet-0.13.0/doc/modules/zmq.rst
+--- a/doc/modules/zmq.rst
++++ b/doc/modules/zmq.rst
 @@ -15,7 +15,6 @@
  
  .. autoclass:: Socket

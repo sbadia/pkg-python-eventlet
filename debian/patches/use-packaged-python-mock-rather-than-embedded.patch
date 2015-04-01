@@ -4,8 +4,8 @@ Author: Thomas Goirand <zigo@debian.org>
 Forwarded: no
 Last-Update: 2014-09-07
 
---- python-eventlet-0.15.2.orig/tests/db_pool_test.py
-+++ python-eventlet-0.15.2/tests/db_pool_test.py
+--- a/tests/db_pool_test.py
++++ b/tests/db_pool_test.py
 @@ -7,7 +7,8 @@ import os
  import traceback
  from unittest import TestCase, main
@@ -16,15 +16,15 @@ Last-Update: 2014-09-07
  from eventlet import event
  from eventlet import db_pool
  from eventlet.support import six
---- python-eventlet-0.15.2.orig/tests/websocket_test.py
-+++ python-eventlet-0.15.2/tests/websocket_test.py
-@@ -9,7 +9,8 @@ from eventlet.green import httplib
- from eventlet.green import urllib2
+--- a/tests/websocket_test.py
++++ b/tests/websocket_test.py
+@@ -8,7 +8,8 @@ from eventlet.green import httplib
+ from eventlet.support import six
  from eventlet.websocket import WebSocket, WebSocketWSGI
  
--from tests import mock, LimitedTestCase, certificate_file, private_key_file
+-from tests import certificate_file, LimitedTestCase, mock, private_key_file
 +import mock
-+from tests import LimitedTestCase, certificate_file, private_key_file
++from tests import certificate_file, LimitedTestCase, private_key_file
  from tests import skip_if_no_ssl
  from tests.wsgi_test import _TestBase
  
