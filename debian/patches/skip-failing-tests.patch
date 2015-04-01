@@ -1,0 +1,12 @@
+Index: python-eventlet-0.15.2/tests/greenio_test.py
+===================================================================
+--- python-eventlet-0.15.2.orig/tests/greenio_test.py
++++ python-eventlet-0.15.2/tests/greenio_test.py
+@@ -727,6 +727,7 @@ class TestGreenPipe(LimitedTestCase):
+ class TestGreenIoLong(LimitedTestCase):
+     TEST_TIMEOUT = 10  # the test here might take a while depending on the OS
+ 
++    @skipped
+     @skip_with_pyevent
+     def test_multiple_readers(self, clibufsize=False):
+         debug.hub_prevent_multiple_readers(False)

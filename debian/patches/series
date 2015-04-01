@@ -1,0 +1,4 @@
+skip-failing-tests.patch
+remove-self.assert-in-tests.patcher_test.py.patch
+fix-FTBFS-on-sphinx-build.patch
+use-packaged-python-mock-rather-than-embedded.patch

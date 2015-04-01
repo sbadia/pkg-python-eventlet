@@ -1,0 +1,30 @@
+Description: Use the packaged python-mock package
+ Upstream is "vendorizing" mock. This sux...
+Author: Thomas Goirand <zigo@debian.org>
+Forwarded: no
+Last-Update: 2014-09-07
+
+--- python-eventlet-0.15.2.orig/tests/db_pool_test.py
++++ python-eventlet-0.15.2/tests/db_pool_test.py
+@@ -7,7 +7,8 @@ import os
+ import traceback
+ from unittest import TestCase, main
+ 
+-from tests import mock, skipped, skip_unless, skip_with_pyevent, get_database_auth
++import mock
++from tests import skipped, skip_unless, skip_with_pyevent, get_database_auth
+ from eventlet import event
+ from eventlet import db_pool
+ from eventlet.support import six
+--- python-eventlet-0.15.2.orig/tests/websocket_test.py
++++ python-eventlet-0.15.2/tests/websocket_test.py
+@@ -9,7 +9,8 @@ from eventlet.green import httplib
+ from eventlet.green import urllib2
+ from eventlet.websocket import WebSocket, WebSocketWSGI
+ 
+-from tests import mock, LimitedTestCase, certificate_file, private_key_file
++import mock
++from tests import LimitedTestCase, certificate_file, private_key_file
+ from tests import skip_if_no_ssl
+ from tests.wsgi_test import _TestBase
+ 
