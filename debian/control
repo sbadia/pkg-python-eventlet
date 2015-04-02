@@ -5,6 +5,7 @@ Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.
 Uploaders: Laszlo Boszormenyi (GCS) <gcs@debian.hu>,
            Thomas Goirand <zigo@debian.org>
 Build-Depends: debhelper (>= 9),
+               dh-python,
                python-all (>= 2.6.6-3~),
                python-setuptools,
                python-sphinx (>= 1.0.7+dfsg)
@@ -21,7 +22,7 @@ Vcs-Browser: http://anonscm.debian.org/viewvc/python-modules/packages/python-eve
 
 Package: python-eventlet
 Architecture: all
-Depends: ${misc:Depends}, ${python:Depends}, ${sphinxdoc:Depends}
+Depends: libjs-jquery, ${misc:Depends}, ${python:Depends}, ${sphinxdoc:Depends}
 Description: concurrent networking library - Python 2.x
  Eventlet allows you to change how you run your code, not how you write it.
  .
